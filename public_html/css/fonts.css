@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald|Crushed|Open+Sans+Condensed:300,300italic);
+
+@font-face {
+    font-family: "Knockout68o";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/knockout/knockout-htf68-fullfeatherwt-webfont.svg#webfontR7MP6wAz") format("svg"),
+		url("fonts/knockout/knockout-htf68-fullfeatherwt-webfont.eot?#iefix") format("eot"), 
+		url("fonts/knockout/knockout-htf68-fullfeatherwt-webfont.woff") format("woff"), 
+		url("fonts/knockout/knockout-htf68-fullfeatherwt-webfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Knockout68";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/knockout/knockout-htf68-fullfeatherwt-webfont.eot?#iefix") format("eot"), 
+		url("fonts/knockout/knockout-htf68-fullfeatherwt-webfont.woff") format("woff"), 
+		url("fonts/knockout/knockout-htf68-fullfeatherwt-webfont.ttf") format("truetype"), 
+		url("fonts/knockout/knockout-htf68-fullfeatherwt-webfont.svg#webfontR7MP6wAz") format("svg");
+}
+
+@font-face {
+    font-family: "Knockout48";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/knockout/knockout-htf48-featherweight-webfont.eot?#iefix") format("eot"), 
+		url("fonts/knockout/knockout-htf48-featherweight-webfont.woff") format("woff"), 
+		url("fonts/knockout/knockout-htf48-featherweight-webfont.ttf") format("truetype"), 
+		url("fonts/knockout/knockout-htf48-featherweight-webfont.svg#webfontFcN14cci") format("svg");
+}

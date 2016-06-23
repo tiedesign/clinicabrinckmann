@@ -1,0 +1,359 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, font, img, ins,
+kbd, q, s, samp, small, strike, sub, sup, tt,
+var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 14px;
+    font-family: Georgia,'Times New Roman',Times,serif;
+}
+:focus {outline: 0;}
+a, a:link, a:visited, a:active{text-decoration:none}
+table {border-collapse: separate;}
+th, td {font-weight: normal;}
+img, iframe {border: none; text-decoration:none;}
+ol, ul {margin-left: 32px;}
+li {margin: 6px auto;}
+input, textarea, select, button {font-size: 100%;font-family: inherit;}
+select {margin: inherit;}
+hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1px}
+
+body {
+    background-color: #efefef;
+    color: #666666;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px 0;
+} 
+
+em {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+blockquote {
+    width: 100%;
+    text-align: right;
+    margin: 10px 0;
+}
+
+button {
+    background: url("../images/botao.gif") no-repeat scroll left top transparent;
+    border: none;	
+    color: #FFFFFF;
+    height: 26px;
+    width: 86px;
+    font-family: 'Knockout48','Trebuchet MS',Helvetica,sans-serif;
+    font-size: 18px;
+    padding-bottom: 1px;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+button:hover {
+    background-position: bottom;
+}
+
+iframe {
+    margin-top: 8px;
+}
+
+input, textarea {
+    border: 1px solid #cccccc;
+    margin: 2px 0;
+    font-size: 80%;
+    color: #666;
+}
+
+.tamanhoInputs {
+    width: 202px;
+}
+
+.tamanhoTextArea {
+    width: 272px;
+}
+
+label {
+    font-weight: normal;
+    font-size: 80%;
+    color: #95A886;
+    width: 70px;
+    margin-top: 4px;
+}
+
+p {
+    font-size: 90%;
+    margin: 5px auto;    
+}
+
+textarea {
+    width: 272px;
+    height: 80px;
+    margin-top: 4px;
+    overflow: auto;
+}
+
+a, a:link, a:visited, a:active{
+    text-decoration: underline;
+    color: #95A886;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #697C5A;
+}
+
+#pg {
+    box-shadow: #ccc 0 0 10px 10px;
+    background: url("../images/b.gif") no-repeat scroll 97% 96% #FFFFFF;
+    border-top: 4px solid #95A886;
+    padding-top: 10px;
+    width: 1000px;
+    margin: 0 auto;
+    height: auto;
+}
+
+#pgLoading {
+	width: 588px;
+	text-align: center;
+	padding: 36px;
+}
+
+#pgLeft {
+    float: left;
+    width: 660px;
+}
+
+#pgRight {
+    background: url("../images/separator.jpg") no-repeat left center;
+    float: right;
+    width: 340px;
+}
+
+#pgLeft .content {
+    padding: 16px 32px;
+}
+
+#pgLeft .menu {
+    padding: 6px 8px;
+}
+
+#pgRight .content {
+    padding: 16px 32px;
+}
+
+#pgRight .menu {
+    padding: 6px 32px;
+}
+
+#menuLeft {
+    padding: 6px 0px 6px 48px;
+    margin-right: 4px;
+}
+
+#testeVozResultado {
+	display: none;	
+}
+
+.fotoPredio {
+	display: none;
+}
+
+.tab {
+    margin-top: 12px;
+    padding-left: 24px;
+}
+
+#tbMenu td {    
+    text-align: center;
+}
+
+#tbMenu a {
+    text-decoration: none;
+}
+
+.menu {
+    border-color: #95A886;
+    border-style: solid;
+    border-width: 1px 0;
+}
+
+.info {
+    min-height: 160px;    
+    margin: 6px 0;
+}
+
+.info div {
+    float: left;
+    margin-right: 12px;
+    text-align: center;
+    width: 160px;
+}
+
+.top {
+    height: 120px;
+    padding: 0 32px;
+}
+
+.top img {
+    margin-bottom: 3px;
+}
+
+#footer {
+    width: 100%;
+    background: #95A886;
+    float: left;
+}
+
+#footerContent {
+    padding: 4px 32px;
+    color: #ffffff;
+    font-size: 70%;
+}
+
+#copyright{
+    margin: 7px 0;
+}
+
+#tie {
+    margin: 3px 0;
+}
+
+.tab p {
+    text-indent: 32px;
+    text-align: justify;
+}
+
+.title, .menuitem {
+    font-family: 'Knockout48','Trebuchet MS',Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #95A886;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 22px;
+}
+
+p.subtitle {
+    font-size: 15px;
+    font-weight: bold;
+    color: #95A886;
+    text-align: center;
+    text-indent: 0px;
+}
+
+p.intro {
+    margin: 12px auto;
+    text-indent: 0px;
+}
+
+p.signature {
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;    
+    margin: 18px 0;
+    text-indent: 0px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+.clearBoth {
+    clear: both;
+    height: 0px;
+}
+
+p.noindent {
+    margin-left: 16px;
+    text-indent: 0px;
+}
+
+p.indent {
+    text-indent: 48px;
+}
+
+.thumbs p {
+    font-size: 12px;
+    margin: 0 0 12px 0;
+	text-align: center;
+}
+
+.thumbs img {
+    margin: 1px;
+}
+
+.bus {
+    border-color: #EFEFEF;
+    border-style: solid;
+    border-width: 0 1px;
+    margin: 0 10px;
+    padding: 4px 10px;    
+}
+
+.description {
+    font-size: 12px;
+    text-indent: 0px;	
+    margin: 0px;
+}
+
+#convenios ul {
+	list-style-type: none;
+}
+
+#convenios li {
+	float: left;
+	width: 180px;
+}
+
+#teste_voz p {
+	line-height: 20px;
+	border-bottom: 1px solid #666666;
+	text-indent: 0px;
+	margin: 0 12px;
+}
+
+#teste_voz span {
+	width: 76px;
+	float: right;	
+	text-align: right;
+}
+
+.tooltip {
+	padding: 6px;
+    font-family: 'Knockout48','Trebuchet MS',Helvetica,sans-serif;
+    font-size: 18px;
+	color: #ffffff;
+	background-color: #95A886;
+	border: 1px solid #697C5A;
+	border-radius: 2px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    font-family: 'Knockout48','Trebuchet MS',Helvetica,sans-serif;
+    font-size: 16px;
+    margin: 0 0 0;
+    padding: 0;
+}
+
+.ui-dialog .ui-dialog-content {
+	color: #666666;
+}

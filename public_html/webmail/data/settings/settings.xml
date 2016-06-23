@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Common>
+		<!-- Default title that will be shown in browser's header (Default domain settings). -->
+		<SiteName>Webmail Clínica Brinckmann</SiteName>
+		<!-- License key is supplied here. -->
+		<LicenseKey />
+		<AdminLogin>mailadm</AdminLogin>
+		<AdminPassword>5416d7cd6ef195a0f7622a9c56b55e84</AdminPassword>
+		<DBType>MySQL</DBType>
+		<DBPrefix />
+		<DBHost>192.185.215.181</DBHost>
+		<DBName>clinicab_webmail</DBName>
+		<DBLogin>clinicab_webmail</DBLogin>
+		<DBPassword>clinicab_webmail</DBPassword>
+		<UseSlaveConnection>Off</UseSlaveConnection>
+		<DBSlaveHost>localhost</DBSlaveHost>
+		<DBSlaveName />
+		<DBSlaveLogin>root</DBSlaveLogin>
+		<DBSlavePassword />
+		<DefaultLanguage>Portuguese-Brazil</DefaultLanguage>
+		<DefaultTimeZone>21</DefaultTimeZone>
+		<DefaultTimeFormat>F24</DefaultTimeFormat>
+		<AllowRegistration>Off</AllowRegistration>
+		<AllowPasswordReset>Off</AllowPasswordReset>
+		<EnableMobileSync>Off</EnableMobileSync>
+		<MobileSyncUrl />
+		<MobileSyncContactDataBase>card</MobileSyncContactDataBase>
+		<MobileSyncCalendarDataBase>cal</MobileSyncCalendarDataBase>
+		<EnableLogging>Off</EnableLogging>
+		<EnableEventLogging>Off</EnableEventLogging>
+		<LoggingLevel>Full</LoggingLevel>
+	</Common>
+	<WebMail>
+		<AllowWebMail>On</AllowWebMail>
+		<IncomingMailProtocol>IMAP4</IncomingMailProtocol>
+		<IncomingMailServer>localhost</IncomingMailServer>
+		<IncomingMailPort>143</IncomingMailPort>
+		<IncomingMailUseSSL>Off</IncomingMailUseSSL>
+		<OutgoingMailServer>localhost</OutgoingMailServer>
+		<OutgoingMailPort>25</OutgoingMailPort>
+		<OutgoingMailAuth>AuthCurrentUser</OutgoingMailAuth>
+		<OutgoingMailLogin />
+		<OutgoingMailPassword />
+		<OutgoingMailUseSSL>Off</OutgoingMailUseSSL>
+		<OutgoingSendingMethod>Specified</OutgoingSendingMethod>
+		<UserQuota>0</UserQuota>
+		<AutoCheckMailInterval>5</AutoCheckMailInterval>
+		<DefaultSkin>AfterLogic</DefaultSkin>
+		<MailsPerPage>20</MailsPerPage>
+		<EnableMailboxSizeLimit>Off</EnableMailboxSizeLimit>
+		<MailboxSizeLimit>0</MailboxSizeLimit>
+		<TakeImapQuota>On</TakeImapQuota>
+		<AllowUsersChangeInterfaceSettings>On</AllowUsersChangeInterfaceSettings>
+		<AllowUsersChangeEmailSettings>On</AllowUsersChangeEmailSettings>
+		<EnableAttachmentSizeLimit>Off</EnableAttachmentSizeLimit>
+		<AttachmentSizeLimit>10240000</AttachmentSizeLimit>
+		<AllowLanguageOnLogin>On</AllowLanguageOnLogin>
+		<FlagsLangSelect>Off</FlagsLangSelect>
+		<LoginFormType>LoginAtDomain</LoginFormType>
+		<UseLoginAsEmailAddress>On</UseLoginAsEmailAddress>
+		<LoginAtDomainValue>clinicabrinckmann.com.br</LoginAtDomainValue>
+		<DefaultDomainValue>clinicabrinckmann.com.br</DefaultDomainValue>
+		<UseAdvancedLogin>Off</UseAdvancedLogin>
+		<UseCaptcha>Off</UseCaptcha>
+		<UseReCaptcha>Off</UseReCaptcha>
+		<AllowNewUsersRegister>On</AllowNewUsersRegister>
+		<AllowUsersAddNewAccounts>Off</AllowUsersAddNewAccounts>
+		<AllowIdentities>Off</AllowIdentities>
+		<StoreMailsInDb>Off</StoreMailsInDb>
+		<AllowInsertImage>On</AllowInsertImage>
+		<AllowBodySize>Off</AllowBodySize>
+		<MaxBodySize>600</MaxBodySize>
+		<MaxSubjectSize>255</MaxSubjectSize>
+		<Layout>Bottom</Layout>
+		<AlwaysShowImagesInMessage>Off</AlwaysShowImagesInMessage>
+		<SaveMail>Always</SaveMail>
+		<IdleSessionTimeout>0</IdleSessionTimeout>
+		<UseSortImapForDateMode>Off</UseSortImapForDateMode>
+		<DetectSpecialFoldersWithXList>On</DetectSpecialFoldersWithXList>
+	</WebMail>
+	<Calendar>
+		<AllowCalendar>Off</AllowCalendar>
+		<ShowWeekends>Off</ShowWeekends>
+		<WorkdayStarts>9</WorkdayStarts>
+		<WorkdayEnds>18</WorkdayEnds>
+		<ShowWorkDay>On</ShowWorkDay>
+		<WeekStartsOn>Monday</WeekStartsOn>
+		<DefaultTab>Month</DefaultTab>
+		<AllowReminders>On</AllowReminders>
+		<EnableOutlookSync>On</EnableOutlookSync>
+		<AutoAddInvitation>On</AutoAddInvitation>
+	</Calendar>
+	<Contacts>
+		<AllowContacts>On</AllowContacts>
+		<ContactsPerPage>20</ContactsPerPage>
+		<PersonalAddressBook>
+			<Mode>Sql</Mode>
+		</PersonalAddressBook>
+		<GlobalAddressBook>
+			<Mode>Off</Mode>
+			<Sql>
+				<Visibility>Off</Visibility>
+			</Sql>
+		</GlobalAddressBook>
+	</Contacts>
+	<StorageTypes>
+		<MailSuite>db</MailSuite>
+		<Db>db</Db>
+		<Domains>db</Domains>
+		<Subadmins>db</Subadmins>
+		<Contacts>db</Contacts>
+		<Users>db</Users>
+		<WebMail>db</WebMail>
+	</StorageTypes>
+</Settings>

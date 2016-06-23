@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^webmail\.clinicabrinckmann\.com\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webmail\.clinicabrinckmann\.com\.br$
+RewriteRule ^/?$ "http\:\/\/clinicabrinckmann\.com\.br\/webmail\/index\.php" [R=301,L]
+

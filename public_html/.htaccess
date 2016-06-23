@@ -1,0 +1,21 @@
+
+RewriteEngine on
+
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName clinicabrinckmann.com.br
+
+RewriteCond %{HTTP_HOST} ^webmail\.clinicabrinckmann\.com\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.webmail\.clinicabrinckmann\.com\.br$
+RewriteRule ^/?$ "http\:\/\/clinicabrinckmann\.com\.br\/webmail\/index\.php" [R=301,L]
+

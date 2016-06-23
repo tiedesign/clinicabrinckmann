@@ -1,0 +1,185 @@
+<input type="submit" name="next_btn" style="position: absolute; visibility: hidden;" value="Next" />
+
+<h1>
+	Mobile sync
+</h1>
+
+<div class="field_list">
+	<div class="row">
+		<input name="chEnableMobileSync" id="chEnableMobileSync" type="checkbox" value="1" {{MobyleSyncChecked}} />
+		<label id="chEnableMobileSync_label" for="chEnableMobileSync">Enable mobile sync</label>
+	</div>
+	
+	<div class="row">
+		<label class="field_label" id="txtMobileSyncUrl_label" >Mobile sync URL *:</label>
+		<span class="field_value">
+			<input name="txtMobileSyncUrl" class="wm_input" id="txtMobileSyncUrl" type="text" size="50" value="{{MobyleSyncUrl}}" />
+		</span>
+	</div>
+	<div class="row">
+		<label class="field_label" id="txtMobileSyncContactDatabase_label" >Mobile sync contact database *:</label>
+		<span class="field_value">
+			<input name="txtMobileSyncContactDatabase" class="wm_input" id="txtMobileSyncContactDatabase" type="text" size="50" value="{{MobyleSyncContactDatabase}}" />
+		</span>
+	</div>
+	<div class="row">
+		<label class="field_label" id="txtMobileSyncCalendarDatabase_label" >Mobile sync calendar database *:</label>
+		<span class="field_value">
+			<input name="txtMobileSyncCalendarDatabase" class="wm_input" id="txtMobileSyncCalendarDatabase" type="text" size="50" value="{{MobyleSyncCalendarDatabase}}" />
+		</span>
+	</div>
+	<div class="field_description">
+		<span class="error">
+			{{MobileSyncError}}
+		</span>
+	</div>
+</div>
+<br />
+<div class="note">
+	<b>TODO</b>
+	<br>
+	<br>
+
+	In order to provide Mobile Synchronization you'll need to install Funambol Data Synchronization Server.
+	<br />
+	<br>
+
+	You can download Funambol server from here:
+	<br>
+	<span class="{{WinClass}}">
+	<br><b>Windows</b><br>
+	<!-- https://www.forge.funambol.org/servlets/OCNDirector?id=V85FUNSERVWIN -->
+	<a href="http://www.funambol.com/opensource/download_response.php?file_id=funambol-8.5.2.exe">Funambol Server for Wndows</a>
+	<br><b>Windows 64</b><br>
+	<!-- https://www.forge.funambol.org/servlets/OCNDirector?id=V85FUNSERVWIN64 -->
+	<a href="http://www.funambol.com/opensource/download_response.php?file_id=funambol-8.5.2-x64.exe">Funambol Server for 64 bit Windows</a>
+	</span>
+	<span class="{{LinuxClass}}">
+	<br><b>Linux</b><br>
+	<!-- https://www.forge.funambol.org/servlets/OCNDirector?id=V85FUNSERVLIN -->
+	<a href="http://www.funambol.com/opensource/download_response.php?file_id=funambol-8.5.2.bin">Funambol Server for Linux</a>
+	<br><b>Linux64</b><br>
+	<!-- https://www.forge.funambol.org/servlets/OCNDirector?id=V85FUNSERVLIN64 -->
+	<a href="http://www.funambol.com/opensource/download_response.php?file_id=funambol-8.5.2-x64.bin">Funambol Server for 64 bit Linux</a>
+	</span>
+	<br><br>
+
+	<!--
+	On Funambol's Download page you can either fill up your contact information of skip it by clicking
+	"No thanks - please take me straight to the downloads!" and go directly to download page.
+	<br /><br />
+	-->
+	Upon obtaining Funambol Data Synchronization Server please install it into
+	<br>
+	<span class="{{WinClass}}">
+	C:\Program Files\Funambol
+	</span>
+	<span class="{{LinuxClass}}">
+	/opt/Funambol
+	</span>
+	<br><br>
+	In the rest of this document, this Funambol installation directory will be referred to as $FUNAMBOL_HOME.
+	<br><br>
+	Once installation is completed, you need to configure Funambol Server.
+	It should be configured to use the same MySQL Database that was specified for WebMail.
+	You need to configure properties file for Funambol Data Synchronization Server.
+	The $FUNAMBOL_HOME/install.properties file is the central configuration information storage
+	that is used by the installation procedure to set up the Funambol Data Synchronization Server.
+	Please, follow the below steps to configure Funambol Server:
+	<br><br>
+	<ol>
+		<li>
+			Download MySQL connector from <a href="http://www.mysql.com/downloads/connector/j/">official MySQL page</a>
+			<br /><br />
+		</li>
+		<li>
+			Copy MySQL connector to
+			<br />
+			<span class="{{WinClass}}">
+				$FUNAMBOL_HOME\funambol\tools\jre-1.6.0\jre\lib\ext
+			</span>
+			<span class="{{LinuxClass}}">
+				$FUNAMBOL_HOME/funambol/tools/jre-1.6.0/jre/lib/ext
+			</span>
+			<br /><br />
+		</li>
+		<li>
+			Modify the following file:
+			<br />
+			<span class="{{WinClass}}">
+				$FUNAMBOL_HOME\funambol\ds-server\install.properties
+			</span>
+			<span class="{{LinuxClass}}">
+				$FUNAMBOL_HOME/funambol/ds-server/install.properties
+			</span>
+			<br />
+			Change the value of the dbms parameter to: dbms=mysql
+			<br /><br />
+		</li>
+		<li>
+			Comment out the hypersonic configuration section:
+			<br />
+			#jdbc.classpath=../tools/hypersonic/lib/hsqldb.jar<br />
+			#jdbc.driver=org.hsqldb.jdbcDriver<br />
+			#jdbc.url=jdbc:hsqldb:hsql://localhost/funambol<br />
+			#jdbc.user=sa<br />
+			#jdbc.password=<br />
+			<br />
+		</li>
+		<li>
+			Place the MySQL configuration: details:
+			<br />
+			for example:
+			<br/>
+			<span class="{{LinuxClass}}">
+				jdbc.classpath=/opt/Funambol/tools/jre-1.6.0/lib/ext/mysql-connector-java-&lt;version&gt;-bin.jar
+			</span>
+			<span class="{{WinClass}}">
+				jdbc.classpath="C:\Program Files\Funambol\tools\jre-1.6.0\jre\lib\ext\mysql-connector-java-&lt;version&gt;-bin.jar
+			</span>
+			<br />
+			jdbc.driver=com.mysql.jdbc.Driver<br />
+			jdbc.url=jdbc:mysql://u-server/dev_webmail_5x2?characterEncoding=UTF-8<br />
+			jdbc.user=root<br />
+			jdbc.password= ~ password ~ <br />
+			<br />
+		</li>
+		<li>
+			Run the following command:
+			<br />
+			<span class="{{WinClass}}">
+				$FUNAMBOL_HOME\funambol\bin\install.cmd
+			</span>
+			<span class="{{LinuxClass}}">
+				$FUNAMBOL_HOME/funambol/bin/install
+			</span>
+			<br />
+			answering 'y' to all questions.
+			<br />
+			After that, run the service
+			<br />
+			<span class="{{WinClass}}">
+				Start-&gt;Programs-&gt;Funambol-&gt;Data Synchronization Server-&gt;Start Server
+			</span>
+			<span class="{{LinuxClass}}">
+				$FUNAMBOL_HOME/funambol/bin/funambol start
+			</span>
+			<br /><br />
+		</li>
+		<li>
+			then specify Mobile Sync URL (at the top of this page), like<br>
+			http://your.host.com:8080/funambol/ds
+			<br /><br />
+		</li>
+		<li>
+			The final step in setting up Synchronization - you should set the following script to be launched by your OS once a minute:
+			$WEBMAIL_ROOR/calendar/cron/funambol.php Cron job should run PHP interpreter with funambol.php file as a parameter. Something like this:<br> php -f /path/to/calendar/cron/funambol.php
+		</li>
+	</ol>
+</div>
+
+<div class="buttons">
+	<hr />
+	<input class="wm_button" type="submit" name="back_btn" value="Back" />
+	<input class="wm_button right" type="submit" name="next_btn" value="Next" />
+</div>

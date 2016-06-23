@@ -1,0 +1,2 @@
+Powered by <a href="http://www.afterlogic.com/products/webmail-pro" target="_blank">AfterLogic WebMail Pro</a><br />
+Copyright &copy; 2002-2011 <a href="http://www.afterlogic.com" target="_blank">AfterLogic Corporation</a>
